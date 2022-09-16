@@ -3,9 +3,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RadioTest {
+    Radio radio = new Radio(10);
     @Test
     void findMaxStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(15);
 
@@ -14,7 +14,6 @@ public class RadioTest {
 
     @Test
     void findMinStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
 
@@ -23,7 +22,6 @@ public class RadioTest {
 
     @Test
     void findMaxVolume() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentVolume(15);
 
@@ -33,7 +31,6 @@ public class RadioTest {
 
     @Test
     void findMinVolume() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentVolume(0);
 
@@ -42,7 +39,6 @@ public class RadioTest {
 
     @Test
     void nextMaxStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(9);
 
@@ -55,7 +51,6 @@ public class RadioTest {
 
     @Test
     void nextStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
 
@@ -68,7 +63,6 @@ public class RadioTest {
 
     @Test
     void prevMinStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
 
@@ -81,7 +75,6 @@ public class RadioTest {
 
     @Test
     void prevStation() {
-        Radio radio = new Radio(10);
 
         radio.setCurrentStation(9);
 
@@ -96,13 +89,13 @@ public class RadioTest {
     void plusMaxVolume() {
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
 
         radio.increaseVolume();
 
         radio.getCurrentVolume();
 
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
