@@ -143,4 +143,26 @@ public class RadioTest {
 
         assertEquals(9, radio.getCurrentVolume());
     }
+
+    @Test()
+    void setStation() {
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(-1);
+
+        radio.getCurrentStation();
+
+        assertEquals(0,radio.getCurrentStation());
+    }
+
+    @Test()
+    void setVolume() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(-1);
+
+        radio.getCurrentVolume();
+
+        assertEquals(0, radio.getCurrentVolume());
+    }
 }
